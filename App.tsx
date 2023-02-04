@@ -1,6 +1,6 @@
 import {StatusBar, StyleSheet, Text, View} from 'react-native';
 
-import { Home } from './src/Home';
+import { Home } from './src/view/Home';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App() {

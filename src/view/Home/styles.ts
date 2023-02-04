@@ -3,7 +3,9 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 80
+    marginTop: 80,
+    paddingLeft: 24,
+    paddingRight: 24
   },
   logo: {
     width: 180,
@@ -12,9 +14,8 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   containerInput:{
-    marginLeft: 24,
-    marginRight: 8,
-    marginTop: 37
+    marginTop: 37,
+    flexDirection: 'row'
   },
   textInput: {
     height: 56,
@@ -23,5 +24,7 @@ export const styles = StyleSheet.create({
     padding: 16,
     fontSize: 16,
     backgroundColor: '#262626',
+    marginRight: 6,
+    flex: 1
   }
 });
