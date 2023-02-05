@@ -19,7 +19,52 @@ export function TaskList(props: TaskListProps){
       {
         text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         concluido: false
-      }
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      {
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        concluido: false
+      },
+      
      ]
   return(
     <View style={styles.container}>
@@ -40,7 +85,6 @@ export function TaskList(props: TaskListProps){
           <Text style={styles.title}>Você ainda não tem tarefas cadastradas</Text>
           <Text style={styles.subtitle}>Crie tarefas e organize seus itens a fazer</Text>
         </View>
-
       )}
       />
     </View>

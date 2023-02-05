@@ -16,15 +16,22 @@ export function TaskItem(props: TaskItemProps){
   return(
     <View style={styles.container}>
       <Checkbox
+        style={styles.checkButton}
         value={concluido}
         onValueChange={()=>{
           console.log('fui clicado!')
           setConcluido(!concluido)
         }}
       />
-        <Text style={styles.text}>{props.text}</Text>
-      <TouchableOpacity style={styles.deleteButton}>
-        <Ionicons style={styles.deleteButtonIcon}/>
+      <TouchableOpacity style={styles.textContainer} onPress={()=>{
+        setConcluido(!concluido)
+      }}>
+        <Text style={styles.text}>{props.text}</Text> 
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.deleteButtonContainer} onPress={()=>{
+        console.log('DELETAR!')
+      }}>
+        <Ionicons name="trash-outline" size={20} style={styles.deleteButtonIcon}/>
       </TouchableOpacity>
     </View>
   )

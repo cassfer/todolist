@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     marginTop: 16,
     fontSize: 14,
+    marginBottom: '60%',
   },
   containerListEmpty:{
     borderTopWidth: 1.5 ,
