@@ -1,81 +1,27 @@
 import { FlatList, Text, View } from "react-native";
 
 import Ionicons from '@expo/vector-icons/Ionicons'
+import { Task } from "../../model/TaskModel";
 import { TaskItem } from "../TaskItem";
 import { styles } from "./styles";
 
 type TaskListProps = {
-  taskList: String[]
+  taskList: Task[];
+  handleTaskConcluida: Function;
+  handleTaskExcluir: Function;
 }
-
-type Task = {
-  text: string;
-  concluido: boolean;
-}
-
 export function TaskList(props: TaskListProps){
-
-    let listaDeTasks: Task[] = [
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      {
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        concluido: false
-      },
-      
-     ]
   return(
     <View style={styles.container}>
       <FlatList
-      data={listaDeTasks}
-      keyExtractor = {(item, index) => index.toString()}
-      renderItem = {({item, index})=>(
+      data={props.taskList}
+      keyExtractor = {(item) => item.id.toString()}
+      renderItem = {({item})=>(
         <TaskItem
-          key={index}
-          text={item.text}
-          concluido={item.concluido}
+          key={item.id}
+          task={item}
+          handleTaskConcluida={props.handleTaskConcluida}
+          handleTaskExcluir={props.handleTaskExcluir}
         />
       )}
       showsVerticalScrollIndicator={false}

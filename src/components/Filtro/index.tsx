@@ -1,8 +1,16 @@
 import {Text, TouchableOpacity, View} from 'react-native'
 
+import { Task } from '../../model/TaskModel';
 import { styles } from './styles';
 
-export function Filtro(){
+type Props = {
+  taskList: Task[];
+  taskListConcluida: number;
+}
+
+
+export function Filtro(props: Props){
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={{flexDirection: 'row'}}>
@@ -10,15 +18,15 @@ export function Filtro(){
           Criadas
         </Text>
         <Text style={styles.quantidade}>
-          0
+          {props.taskList.length}
         </Text>
       </TouchableOpacity>
       <TouchableOpacity style={{flexDirection: 'row'}}>
         <Text style={styles.concluidaButton}>
-            Concluídas
+          Concluídas
         </Text>
         <Text style={styles.quantidade}>
-            14
+          {props.taskListConcluida}
         </Text>
       </TouchableOpacity>
     </View>

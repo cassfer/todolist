@@ -37,5 +37,11 @@ export const styles = StyleSheet.create({
   },
   deleteButtonIcon: {
     color: '#808080'
+  },
+  taskConcluida: {
+    textDecorationLine: 'line-through'
+  },
+  taskNaoConcluida: {
+    textDecorationLine: 'none'
   }
 })
